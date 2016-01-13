@@ -1,0 +1,23 @@
+resume.form:
+ path: '/resume/myform'
+ defaults:
+   _title: 'Application form'
+   _form: '\Drupal\resume\Form\ResumeForm'
+ requirements:
+   _permission: 'access content'
+
+work.form:
+  path: 'resume/mypage'
+  defaults:
+    _form: '\Drupal\resume\Form\WorkForm'
+    _title: 'D8 form'
+  requirements:
+    _permission: 'access content'
+  example.name:
+
+addition.form:
+    path: '/addition/{first}/{second}/{third}'
+    defaults:
+      _controller: '\Drupal\resume\Controller\AdditionController::add'
+    requirements:
+      _permission: 'access content'
